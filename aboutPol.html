@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <link rel="stylesheet" href="./css/aboutPol.css">
+  <head>
+    <meta charset="utf-8">
+    <title>관심 기술 혹은 기업 관련 상세 내용</title>
+    <link rel="icon" href="./images/eagle.png">
+    <script type="text/javascript" src="./js/aboutPol.js"></script>
+  </head>
+  <script>
+    pastdate();
+  </script>
+  <div style = "text-align:right">
+  사이트 선택 :
+  <select id="movesite">
+    <option value="https://www.police.go.kr/index.do" selected>경찰청 메인</option>
+    <option value="https://www.police.go.kr/user/bbs/BD_selectBbsList.do?q_bbsCode=1004">경찰청 채용 공고</option>
+    <option value="https://www.police.go.kr/www/agency/orginfo/orginfo02.jsp">경찰청 부서별 연락처</option>
+  </select>
+  <button onclick="loadsite()">웹 사이트 접속</button>
+  </div>
+  <center><a href="./aboutPol.html" target="_self"><img id="toGoMainBanner" src="./images/Policebanner.png" alt="메인 이동 배너" title="클릭하면 메인 화면으로 이동합니다."></a></center>
+
+  <body onload="changecolor(); init();">
+    <div id="allMenu">
+    <ul class = "MyMenu">
+      <li id="titleli"><a href="#" id = "titlea">과제 관련</a>
+        <ul class = "submenu" id = "menuul">
+          <li id="titleli"><a href="#" id = "titlea" onClick="location.href='motivation.html'">주제선정동기</a></li>
+          <li id="titleli"><a href="#" id = "titlea" onClick="location.href='futureplan.html'">FuturePlan</a></li>
+          <li id="titleli"><a href="#" id = "titlea" onclick="location.href='https://github.com/isakdevelop/MyWebAssignment'">GitHub</a></li>
+        </ul>
+      </li>
+      <li id="titleli"><a href="#" id = "titlea">기관 소개</a>
+        <ul class = "submenu" id = "menuul">
+          <li id="titleli"><a href="#" id = "titlea" onclick="road_history()">경시청의역사</a></li>
+          <li id="titleli"><a href="#" id = "titlea" onclick="road_pilgrimage()">경찰역사순례길</a></li>
+        </ul>
+      </li>
+      <li id="titleli"><a href="#" id = "titlea">소통/공감</a>
+        <ul class = "submenu" id = "menuul">
+          <li id="titleli"><a href="#" id = "titlea" onclick="road_news()">주요 뉴스</a></li>
+          <li id="titleli"><a href="#" id = "titlea" onclick="road_remembrance()">순직경찰관추모</a></li>
+        </ul>
+      </li>
+      <li id="titleli"><a href="#" id = "titlea">경찰의 이해</a>
+        <ul class = "submenu" id = "menuul">
+          <li id="titleli"><a href="#" id = "titlea" onclick="road_symbol()">상징</a></li>
+          <li id="titleli"><a href="#" id = "titlea" onclick="road_role()">계급과 역할</a></li>
+          <li id="titleli"><a href="#" id = "titlea" onclick="road_constitution()">헌장</a></li>
+          <li id="titleli"><a href="#" id = "titlea" onclick="road_dif()">일반 공무원과 차이점</a></li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+    <hr id = start_hr>
+    <div class="ViewWeb">
+      <div id = "history_none">
+      <h3>경찰의 시작, 경무청의 역사</h3>
+      <table border = "1" id = "history">
+        <tr>
+          <td style = "line-height:0"><img id = "pastcloth" src="./images/pastPol_Cloth.jpg" alt="경무청 옷"></td>
+          <td>근대의 경찰, 경무청의 창시 배경은 <span id = "dayOfEvent">1894년 6월 27일</span> 일본의 <span id = "event">각의</span> 결정으로
+            인해서<br>조선의 2년 이내의 완전한 <span id = "event">경찰</span>의 실행 요구에서 비롯되었습니다.<br>이에따라 <span id = "dayOfEvent">
+            1894년 6월 29일</span> <span id = "event">김홍각 내각</span>이 일본 각의 결정을 시행하게됩니다.<br>이 때 처음으로 경찰을 <span id = "event">법무아문</span> 하에 창설할 것을
+          정하였으나,<br><span id = "dayOfEvent">1894년 7월 1일</span> <span id = "event">내무아문</span>으로 변경하게 됩니다.<br>이로써 근대의 경찰로 불리는 경무청이 탄생하게 되었습니다.
+          </td>
+        </tr>
+      </table>
+      </div>
+      <div id = "pilgrimage_none">
+        <h3>경찰 역사 순례길</h3>
+        <div id = "leftspace">
+          <div>
+            <img src="./images/ruins-map-all-new.jpeg" alt="순례길 지도" width="400" height="700">
+          </div>
+        </div>
+        <div id = "rightspace">
+          <div>
+        <details style="text-align:center">
+          <summary>경찰 역사 순례길이란?</summary>
+          <p>전국의 대표적 경찰역사 유적지 41개소를 방문하여<br>민주·인권 등 경찰관에게 가장 중요한 핵심가치를 체험하고<br>참된 경찰정신을 함양할 수 있도록 개발한 코스입니다.</p>
+        </details>
+        <br><br>
+        <details style="text-align:center">
+          <summary>경찰역사순례길 코스 구성</summary>
+          <p>경찰역사순례길은 민주·인권과 국가안보 등 <br>경찰관이 지켜야 할 소중한 가치를 보여주는 <br>대표적 장소들로 이루어져 있습니다.<br>
+          본받고 자랑스러워할 선배 경찰들뿐만 아니라<br>진지한 성찰이 필요한 경찰 역사와 관련된 장소들도<br>
+          모두 망라하여 참된 경찰정신을 고민할 수 있도록 하고 있습니다. <br>이처럼 역사적 상징성이 크면서도 가급적 접근성도 좋고<br>
+          인근 명소를 연계 방문할 수 있어 가족들과 함께 찾아볼만한 <br>전국 곳곳의 경찰 유적지들로 구성하였습니다.</p>
+        </details>
+          </div>
+        </div>
+      </div>
+      <div id = "news_none">
+        <h3>이 시각 주요 뉴스</h3>
+        <iframe src="https://www.police.go.kr/user/bbs/BD_selectBbsList.do?q_bbsCode=1011" width="850" height="700"></iframe>
+      </div>
+      <div id = "remembrance_none">
+        <h3>순직 경찰관에 대하여</h3>
+          <iframe src="https://www.police.go.kr/user/bbs/BD_selectBbsList.do?q_bbsCode=1015" width="400" height="300"></iframe>
+          <canvas id="myCanvas" width="400" height="300"></canvas><br>
+          <div style="text-align:right"><input type="color" id="linecolor">&nbsp;&nbsp;선색
+          <input type="button" value="지우기" onclick="clearCanvas()"></div>
+          <p style="text-align:center">우리의 안전한 생활을 위하여, 사회의 치안을 위하여 열심히 분투하시는 경찰 분들의 <span style="color:#DC143C">헌신과 희생</span>으로 인하여<br>저희는
+          지금도 행복하게 살 수 있습니다. 그 분들의 헌신에 감사하는 마음을 담아서 편지와 그림을 그려주세요!</p>
+      </div>
+      <div id = "symbol_none">
+        <h3>경찰의 상징</h3>
+        <hr>
+        <h4>참수리</h4>
+        <img src="./images/sb_pic1.gif" alt="참수리"><br>
+        <script>
+          explicate_cham();
+        </script>
+        <h4>저울</h4>
+        <img src="./images/sb_pic2.gif" alt="저울"><br>
+        <script>
+          explicate_scale();
+        </script>
+        <h4>무궁화</h4>
+        <img src="./images/sb_pic3.gif" alt="무궁화"><br>
+        <script>
+          explicate_sharon();
+        </script>
+      </div>
+      <div id = "role_none">
+      <h3>경찰의 계급과 역할</h3>
+      <table border = "1">
+        <thead>
+        <th id = "matchsize">계급별</th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">순경</div></th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">경장</div></th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">경사</div></th>
+        </thead>
+        <tr>
+          <td><center>형태</center></td>
+          <td><div style="text-align:center;"><img src="./images/tb_img1.gif" alt="순경 마크"></div></td>
+          <td><div style="text-align:center;"><img src="./images/tb_img2.gif" alt="경장 마크"></div></td>
+          <td><div style="text-align:center;"><img src="./images/tb_img3.gif" alt="경사 마크"></div></td>
+        </tr>
+        <tr>
+          <td><center>업무</center></td>
+          <td colspan="3">지구대와 경찰서·기동대 등에서 치안실무자로서 국민과 가장 밀접한 임무를 수행하고 있으며<br>'경찰의 뿌리'라고 할 수 있습니다.</td>
+        </tr>
+      </table>
+      <table border = "1">
+        <thead>
+        <th id = "matchsize" id = "matchsize">계급별</th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">경위</div></th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">경감</div></th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">경정</div></th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">총경</div></th>
+        </thead>
+        <tr>
+          <td><center>형태</center></td>
+          <td><div style="text-align:center;"><img src="./images/tb_imga1.gif" alt="경위 마크"></div></td>
+          <td><div style="text-align:center;"><img src="./images/tb_imga2.gif" alt="경감 마크"></div></td>
+          <td><div style="text-align:center;"><img src="./images/tb_imga3.gif" alt="경정 마크"></div></td>
+          <td><div style="text-align:center;"><img src="./images/tb_imga4.gif" alt="총경 마크"></div></td>
+        </tr>
+        <tr>
+          <td><center>업무</center></td>
+          <td><center>지구대 순찰팀<br>경찰서 계장급<br>경찰청·시도청 실무자<center></td>
+          <td><center>지구대장<br>경찰서 주요 계장 및 팀장<br>(생활안전, 강력, 정보2 등)<br>경찰청·시도청 반장급</center></td>
+          <td><center>경찰서 과장<br>경찰청·시도청 계장급</center></td>
+          <td><center>경찰서장<br>경찰청 시도청<br>과장급으로 근무</center></td>
+        </tr>
+      </table>
+      <table border = "1">
+        <thead>
+        <th id = "matchsize">계급별</th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">경무관</div></th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">치안감</div></th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">치안정감</div></th>
+        <th id = "matchsize"><div id="rank" onmouseover="show()" onmouseout="hide()">치안총감</div></th>
+        </thead>
+        <tr>
+          <td><center>형태</center></td>
+          <td><div style="text-align:center;"><img src="./images/tb_imgb1.gif" alt="경무관 마크"></div></td>
+          <td><div style="text-align:center;"><img src="./images/tb_imgb2.gif" alt="치안감 마크"></div></td>
+          <td><div style="text-align:center;"><img src="./images/tb_imgb3.gif" alt="치안정감 마크"></div></td>
+          <td><div style="text-align:center;"><img src="./images/tb_imgb4.gif" alt="치안총감 마크"></div></td>
+        </tr>
+        <tr>
+          <td><center>업무</center></td>
+          <td><center>시도청차장<br>서울·부산·경기·인천 등<br>시도청부장<br> 경찰청 심의관<br>경찰수사연수원장 급<center></td>
+          <td><center>시도경찰청장<br>경찰교육원장<br>중앙경찰학교장<br>경찰청국장 급</center></td>
+          <td><center>경찰청 차장<br> 서울·부산·경기·인천<br>시도경찰청장<br>경찰대학장 급</center></td>
+          <td><center>경찰의 총수인 경찰청장</center></td>
+        </tr>
+      </table>
+      <br><br><br>
+      <iframe width="845" height="627" src="https://www.youtube.com/embed/HtGjFBKJyIk" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div id = "constitution_none">
+        <h3>경찰 헌장</h3>
+        <ul>
+          <li id = charter>우리는, 모든 사람의 인격을 존중하고 누구에게나 따뜻하게 봉사하는 친절한 경찰이다.</li><br>
+          <li id = charter>우리는, 정의의 이름으로 진실을 추구하며, 어떠한 불의나 불법과도 타협하지 않는 의로운 경찰이다.</li><br>
+          <li id = charter>우리는, 국민의 신뢰를 바탕으로 오직 양심에 따라 법을 집행하는 공정한 경찰이다.</li><br>
+          <li id = charter>우리는, 건전한 상식 위에 전문지식을 갈고닦아 맡은 일을 성실하게 수행하는 근면한 경찰이다.</li><br>
+          <li id = charter>우리는, 화합과 단결 속에 항상 규율을 지키며, 검소하게 생활하는 깨끗한 경찰이다.</li><br>
+        </ul>
+        <h3>경찰의 의무</h3>
+        <h4>(1)선서의 의무</h4>
+        <h5>1. 경찰공무원은 국가공무원법 제55조에 따라서 소속기관장 앞에서 선서를 한다.</h5>
+        <h4>(2)성실의 의무</h4>
+        <h5>2. 모든 공무원은 국가공무원법 제56조에 따라서 성실히 직무를 수행할 의무를 가진다.<br>
+        성실의 의무를 위반하면 징계의 사유가 된다.</h5>
+        <h4>(3)직무상의 의무</h4>
+        <h5>3-1.허위보고 금지의 의무</h5>
+        <h5>3-2.지휘권 남용 등의 금지</h5>
+        <h5>3-3.제복 및 무기휴대의 의무 : 경찰공무원법에 따라 경찰공무원은 항상 제복을 착용해야 한다. 그러나 특수한 경우(사복경찰 등)는 예외로 한다.</h5>
+        <h5>3-4.친절 및 공정의 의무 : 국가공무원법 제59조에 따라 경찰공무원은 국민에 대해 친절하고 공정하게 대해야 하는 의무가 있다.<br>
+          경찰관은 국민을 위한 봉사자로서 신속하며 정확하게 업무를 처리하여야 한다.<br>
+          이 의무는 법적인 의무이기 때문에 위반할 경우에는 처벌의 대상이 될 수 있다.</h5>
+        <h5>3-5.직무전념의 의무 : 국가공무원법 제58조와 경찰공무원복무규정 제8조에 따라서 소속상관의 허가 없이 직장을 이탈해서는 안된다.<br>
+          업무 이외에 영리를 위한 활동도 금지된다.</h5>
+        <h5>3-6.법령준수의 의무</h5>
+        <h5>3-7.복종의 의무 : 경찰공무원은 국가공무원법 제57조에 따라 자기 상관의 직무상 명령에 복종해야 하는 의무가 있다.</h5>
+        <h5>3-8.성실의 의무</h5>
+        <h5>3-9.신분상의 의무 : 비밀엄수의 의무, 청렴의무, 품위유지에 대한 의무, 개인영예추구의 금지의무, 정치운동 금지의무, 집단행동 금지의무</h5>
+      </div>
+      <div id = "dif_none">
+      <h3>경찰공무원과 일반공무원의 차이점</h3>
+      <span style="color:blue">경찰공무원</span>은 위험성, 기동성, 권력성, 조직성, 정치성 등 일반 공무원과는 다른 차이점이 있기 때문에 일반공무원과 다릅니다.
+      <button onclick="change()">보기/감추기</button>
+      <ul id="hideli">
+        <li>위험성은 경찰공무원이 항상 위험에 대처해야하는 특성을 말합니다. <br>위험에 대처하기 위해서 강한 신체와 정의감이 요구되며 권총과 같은 무기휴대가 허용이 되는 이유입니다.</li>
+        <li>기동성은 경찰업무의 특성상 신속하게 대응하지 못하면 그 피해가 확산되기 때문에 기동성이 요구되는 특성을 말합니다.</li>
+        <li>권력성은 경찰작용이 시민의 자유와 권리를 제한하는 권력적인 성격을 가진 특성을 말합니다.</li>
+        <li>조직성은 돌발적이고 위험한 상황에 신속하게 대처하기 위해 일반 행정조직과는 다르게<br>보다 강화된 형태의 계급사회를 기반으로 한 특성을 말합니다.</li>
+        <li>정치성은 정치권력에 의해 정치적 목적을 위해 악용될 수 있는 특성을 말합니다.<br>경찰작용은 강제적인 실력행사를 동원할 수 있기 때문에 권력이 남용되면 심한 피해를 야기시킵니다.<br>그러한 권력의 남용을 최대한 억제하기 위하여 경찰작용에는 여타 공무원에 비하여 보다 엄격한 정치적 중립성이 요구됩니다.</li>
+      </ul>
+      </div>
+    <br>
+    <div id = under_img>
+      <div class="policecar">
+        <img id = "polcar" src="./images/mainimg.jpeg" alt="순마 사진" width="850"></div>
+      <div class="imgtext">
+        <p style="font-size : 15px; color : white">KOREAN NATIONAL POLICE AGENCY</p>
+        <p style="font-size : 30px; color : white">가장 안전한 나라,<br>존경과 사랑받는 경찰</p>
+      </div>
+    </div>
+    <br><br><br>
+    <footer class = "footer"><form><textarea rows="5" cols="104" placeholder="이곳은 메모하는 공간입니다."></textarea></form></footer>
+  </body>
+</html>

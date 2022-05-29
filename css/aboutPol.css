@@ -1,0 +1,131 @@
+#allMenu {
+  padding:0;
+  margin:0
+}
+#titleli {
+  margin-right: 40px;
+  list-style: none;
+}
+#titlea {
+  text-decoration:none;
+  font-size:14px
+}
+#titlea:hover {
+  color: #ffd700;
+  font-weight:bold;
+}
+.MyMenu {
+  width: 1000px;
+  overflow: hidden;
+  margin-left: 230px;
+}
+.MyMenu > li {
+  margin-left: 20px;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+}
+.MyMenu a {
+  color: black;
+  text-align: center;
+}
+.submenu > li {
+  line-height: 50px;
+}
+.submenu {
+  height: 0; /*ul의 높이를 안보이게 처리*/
+  overflow: hidden;
+}
+.MyMenu > li:hover .submenu {
+  height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+  transition-duration: 1s;
+}
+#start_hr {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.ViewWeb{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+#history_none, #role_none, #pilgrimage_none , #news_none, #remembrance_none, #symbol_none, #constitution_none, #dif_none {
+  display: none;
+}
+#toGoMainBanner {
+  width: 40%;
+  height: 100px;
+}
+#pilgrimage_none {
+  position: relative;
+  width: 850px;
+  height: 700px;
+}
+#leftspace {
+  width: 425px;
+  height: 700px;
+  position: absolute;
+  left: 0;
+  border-right: 1px solid black;
+}
+#rightspace {
+  width: 425px;
+  position: absolute;
+  right: 0;
+}
+#aboutPol_summary {
+  font-size: 20px;
+  color: #050099;
+}
+#pastcloth {
+  width : 300px;
+  height: 250px;
+  border: thick double #32a1ce;
+}
+#dayOfEvent {
+  color: #00CC00;
+}
+#event {
+  color : blue;
+}
+#matchsize {
+  width: 210px;
+}
+td, th {  //태그 이름 셀렉터
+  background-color: aliceblue;
+}
+thead {
+  background : darkgrey;
+  color: yellow;
+}
+#charter:hover {
+  background: yellowgreen;
+}
+#hideli {
+  font-size: 15px;
+  visibility: hidden;
+}
+h4 {
+  color: #6799FF;
+}
+canvas {
+  border: 1px solid black;
+  float: right;
+}
+#polcar {
+  border-radius: 15px;
+}
+#under_img {
+  width: 100%;
+  position: relative;
+}
+#under_img img {
+  width: 100%;
+  vertical-align: middle;
+}
+.imgtext {
+  padding: 5px 10px;
+	text-align: center;
+	position: absolute;
+	top: 10%;
+	left: 5%;
+}
